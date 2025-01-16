@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IITGN Campus Map</title>
+  <!-- Link to Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- Link to Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Main container for sidebar and map -->
+  <div id="container">
+    <!-- Sidebar -->
+    <div id="sidebar">
+      <div class="header">
+        <img src="iitgn_logo.png" alt="IITGN Logo" class="logo" />
+        <input type="text" id="search-bar" placeholder="Search Buildings..." class="search-bar" />
+        <div id="search-results" class="search-results"></div> <!-- Container for search results -->
+      </div>
+      <h3>Filter by Category</h3>
+      <ul class="legend">
+        <li><input type="checkbox" id="academic" checked> Academic Buildings <span class="legend-color" style="background-color: #E57373;"></span></li>
+        <li><input type="checkbox" id="hostels" checked> Hostels <span class="legend-color" style="background-color: #64B5F6;"></span></li>
+        <li><input type="checkbox" id="faculty-housing" checked> Faculty Housing <span class="legend-color" style="background-color: #81C784;"></span></li>
+        <li><input type="checkbox" id="sports" checked> Sports <span class="legend-color" style="background-color: #FFB74D;"></span></li>
+        <li><input type="checkbox" id="dining" checked> Dinings and Food <span class="legend-color" style="background-color: #BA68C8;"></span></li>
+        <li><input type="checkbox" id="utilities" checked> Utilities <span class="legend-color" style="background-color: #90A4AE;"></span></li>
+      </ul>
+    </div>
+
+    <!-- Map Container -->
+    <div id="map"></div>
+  </div>
+
+  <!-- Link to Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Link to Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

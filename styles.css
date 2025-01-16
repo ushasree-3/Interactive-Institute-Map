@@ -1,0 +1,161 @@
+/* Full screen map */
+#map {
+  height: 100vh; /* Full height */
+  flex-grow: 1; /* Allow the map to take up the remaining space */
+}
+
+/* Move zoom controls to the right */
+.leaflet-right .leaflet-control {
+  margin-right: 10px;
+}
+
+/* Main container to hold sidebar and map */
+#container {
+  display: flex;
+  height: 100vh; /* Ensure the container takes full height */
+}
+
+/* Sidebar styling */
+#sidebar {
+  position: relative;
+  background: white;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  width: 320px; /* Flexible width for the sidebar */
+  height: 100%; /* Full height */
+  overflow-y: auto; /* Scrollable content if needed */
+}
+
+/* Sidebar header (logo + search bar) */
+#sidebar .header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#sidebar .logo {
+  max-width: 50%;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* Style for the search bar */
+#search-bar {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  position: relative; /* Ensures proper relative positioning for dropdown */
+}
+
+/* Style for the search results dropdown */
+#search-results {
+  position: absolute; /* Ensures the dropdown is positioned relative to the sidebar */
+  top: 240px; /* Adjust this to position directly below the search bar */
+  left: 15px; /* Align with the search bar's left padding */
+  width: calc(100% - 30px); /* Matches the search bar's width */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 200px; /* Limit dropdown height */
+  overflow-y: auto;
+  z-index: 1000; /* Ensures dropdown is above other elements */
+  display: none; /* Hidden by default */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */  
+}
+
+.search-result-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.search-result-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* "No results found" message styling */
+.no-results {
+  padding: 10px;
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}
+
+/* Filter by Category section */
+
+#sidebar h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sidebar li {
+  margin-bottom: 5px;
+}
+
+/* Style for the map popup */
+.popup-container {
+  width: 250px; 
+}
+
+.popup-container h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.popup-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.popup-buttons .btn {
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.popup-buttons .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Legend styling */
+.legend {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.legend li {
+  display: flex;
+  justify-content: space-between; /* Title on the left, color box on the right */
+  align-items: center;
+  margin-bottom: 8px; /* Space between items */
+  font-size: 20px; 
+}
+
+.legend-color {
+  width: 16px; /* Square size */
+  height: 16px; /* Square size */
+  display: inline-block;
+  margin-left: 10px; /* Space between the title and the color box */
+}
+
+.legend input[type="checkbox"] {
+  accent-color: #007bff; /* Blue color for the checkbox */
+  width: 16px; 
+  height: 16px;
+  margin-right: 10px; /* Space between checkbox and text */
+}
