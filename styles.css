@@ -143,19 +143,19 @@
   justify-content: space-between; /* Title on the left, color box on the right */
   align-items: center;
   margin-bottom: 8px; /* Space between items */
-  font-size: 20px; 
+  font-size: 16px; 
 }
 
 .legend-color {
-  width: 16px; /* Square size */
-  height: 16px; /* Square size */
+  width: 14px; /* Square size */
+  height: 14px; /* Square size */
   display: inline-block;
   margin-left: 10px; /* Space between the title and the color box */
 }
 
 .legend input[type="checkbox"] {
   accent-color: #007bff; /* Blue color for the checkbox */
-  width: 16px; 
-  height: 16px;
+  width: 14px; 
+  height: 14px;
   margin-right: 10px; /* Space between checkbox and text */
 }
